@@ -8,7 +8,7 @@ function initializeTailwind() {
                 theme: {
                     extend: {
                         colors: {
-                            primary: '#f97316'
+                            primary: '#e63939'
                         }
                     }
                 }
@@ -61,12 +61,12 @@ const servicesData = [
 ]
 
 const pricingData = [
-    { service: "Oil Change", price: "1,000 KES" },
+    { service: "Oil Change + Filter", price: "2,800 KES" },
     { service: "Wheel Alignment", price: "2,500 KES" },
     { service: "Brake Pad Replacement", price: "From 4,500 KES" },
     { service: "Full Engine Service", price: "6,500 KES" },
     { service: "Computer Diagnostics", price: "1,800 KES" },
-    { service: "Tyre Fitting (4 tyres)", price: "2,200 KES" }
+    { service: "Tyre Fitting (4 tyres)", price: "3,200 KES" }
 ]
 
 // =============== CART ===============
@@ -124,7 +124,7 @@ function renderCart() {
     if (!container) return
 
     if (cart.length === 0) {
-        container.innerHTML = `<div class="text-center py-20"><i class="fa-solid fa-cart-shopping text-7xl text-zinc-700 mb-6"></i><p class="text-2xl">Your cart is empty</p><a href="shop.html" class="mt-6 inline-block bg-orange-600 text-white px-8 py-4 rounded-2xl">Start Shopping</a></div>`
+        container.innerHTML = `<div class="text-center py-20"><i class="fa-solid fa-cart-shopping text-7xl text-zinc-700 mb-6"></i><p class="text-2xl">Your cart is empty</p><a href="shop.html" class="mt-6 inline-block bg-red-600 text-white px-8 py-4 rounded-2xl">Start Shopping</a></div>`
         return
     }
 
@@ -145,7 +145,7 @@ function renderCart() {
                     </div>
                     <div class="text-right">
                         <div class="font-bold text-xl">KES ${(item.price * qty).toLocaleString()}</div>
-                        <button onclick="removeFromCart(${item.id})" class="text-xs text-orange-400 hover:text-orange-300 mt-1">Remove</button>
+                        <button onclick="removeFromCart(${item.id})" class="text-xs text-red-400 hover:text-red-300 mt-1">Remove</button>
                     </div>
                 </div>
             </div>
@@ -181,7 +181,7 @@ function renderProducts(filteredProducts) {
         <div class="product-card bg-white/5 border border-white/10 rounded-3xl overflow-hidden group">
             <img src="${product.img}" alt="${product.name}" class="w-full h-48 object-cover">
             <div class="p-5">
-                <div class="text-xs uppercase text-orange-400 mb-1">${product.category}</div>
+                <div class="text-xs uppercase text-red-400 mb-1">${product.category}</div>
                 <h4 class="font-semibold leading-tight mb-2">${product.name}</h4>
                 <p class="text-sm text-zinc-400 line-clamp-2 mb-4">${product.desc}</p>
                 <div class="flex justify-between items-end">
@@ -191,7 +191,7 @@ function renderProducts(filteredProducts) {
                     </div>
                     <div class="flex items-center gap-3">
                         <button onclick="addToCart(${product.id});" 
-                                class="bg-orange-600 hover:bg-orange-700 transition-colors text-white w-11 h-11 rounded-2xl flex items-center justify-center text-xl">
+                                class="bg-red-600 hover:bg-red-700 transition-colors text-white w-11 h-11 rounded-2xl flex items-center justify-center text-xl">
                             <i class="fa-solid fa-cart-plus"></i>
                         </button>
                     </div>
@@ -249,17 +249,17 @@ function renderServices() {
     let html = ''
     servicesData.forEach(service => {
         html += `
-        <div class="bg-white/5 border border-white/10 rounded-3xl p-7 hover:border-orange-500 transition-colors group">
-            <i class="${service.icon} text-5xl text-orange-500 mb-6"></i>
+        <div class="bg-white/5 border border-white/10 rounded-3xl p-7 hover:border-red-500 transition-colors group">
+            <i class="${service.icon} text-5xl text-red-500 mb-6"></i>
             <h3 class="text-2xl font-semibold">${service.title}</h3>
             <p class="text-zinc-400 mt-2">${service.desc}</p>
             <div class="mt-8 flex justify-between items-end">
                 <div>
                     <span class="text-xs">Starting at</span>
-                    <span class="block text-4xl font-bold text-orange-400">KES ${service.price}</span>
+                    <span class="block text-4xl font-bold text-red-400">KES ${service.price}</span>
                 </div>
                 <button onclick="quickBook('${service.title}')" 
-                        class="bg-white text-black px-8 py-4 rounded-2xl font-medium group-hover:bg-orange-600 group-hover:text-white transition-colors">BOOK NOW</button>
+                        class="bg-white text-black px-8 py-4 rounded-2xl font-medium group-hover:bg-red-600 group-hover:text-white transition-colors">BOOK NOW</button>
             </div>
         </div>`
     })
@@ -301,7 +301,7 @@ function renderFeaturedProducts() {
             <img src="${p.img}" class="mx-auto h-36 object-contain">
             <div class="px-4 pb-4">
                 <h4 class="font-medium text-sm">${p.name}</h4>
-                <div class="text-orange-400 font-bold">KES ${p.price}</div>
+                <div class="text-red-400 font-bold">KES ${p.price}</div>
             </div>
         </div>`
     })
@@ -315,8 +315,8 @@ function renderServicesPreview() {
     let html = ''
     preview.forEach(s => {
         html += `
-        <div class="bg-white/5 border border-white/10 rounded-3xl p-6 text-center hover:border-orange-500 transition">
-            <i class="${s.icon} text-4xl mb-4 text-orange-500"></i>
+        <div class="bg-white/5 border border-white/10 rounded-3xl p-6 text-center hover:border-red-500 transition">
+            <i class="${s.icon} text-4xl mb-4 text-red-500"></i>
             <p class="font-semibold">${s.title}</p>
         </div>`
     })
@@ -332,7 +332,7 @@ function renderPricing() {
         html += `
         <div class="bg-white/5 border border-white/10 rounded-3xl p-8 flex justify-between items-center">
             <div class="text-lg">${item.service}</div>
-            <div class="font-bold text-3xl text-orange-400">${item.price}</div>
+            <div class="font-bold text-3xl text-red-400">${item.price}</div>
         </div>`
     })
     container.innerHTML = html
@@ -346,7 +346,7 @@ function renderFAQ() {
     const faqs = [
         { q: "Do you stock genuine Toyota parts?", a: "Yes! All our parts are sourced directly from authorized distributors in Kenya." },
         { q: "How fast is your service?", a: "Most oil changes and alignments are completed within 90 minutes." },
-        { q: "Do you deliver outside Lodwar?", a: "Yes – we deliver to Kakuma, Lokichar, Kalokol and Kitale within 72 hours." },
+        { q: "Do you deliver outside Lodwar?", a: "Yes – we deliver to Kakuma, Lokichar, and Kitale within 48 hours." },
         { q: "Is cash on delivery available?", a: "Absolutely. You can also pay via M-Pesa or bank transfer." }
     ]
 
@@ -373,7 +373,7 @@ function handleBooking(e) {
 
     const message = `Hello EMCA Motors!%0AName: ${name}%0APhone: ${phone}%0AService: ${service}%0ADate: ${document.getElementById('book-date').value}%0ACar: ${document.getElementById('book-car').value}%0A%0AThank you!`
     
-    window.open(`https://wa.me/254768927893?text=${message}`, '_blank')
+    window.open(`https://wa.me/254712345678?text=${message}`, '_blank')
     
     // Reset form
     e.target.reset()
@@ -395,7 +395,7 @@ function handleCheckout(e) {
     // Simulate payment confirmation
     setTimeout(() => {
         alert('🎉 Order placed successfully! Simulated M-Pesa confirmation sent.')
-        window.open(`https://wa.me/254768927893?text=${message}`, '_blank')
+        window.open(`https://wa.me/254712345678?text=${message}`, '_blank')
         
         // Clear cart
         cart = []
@@ -411,7 +411,7 @@ function handleCheckout(e) {
 function handleContact(e) {
     e.preventDefault()
     const message = `New contact form submission!%0AName: ${document.getElementById('contact-name').value}%0APhone: ${document.getElementById('contact-phone').value}%0AEmail: ${document.getElementById('contact-email').value}%0AMessage: ${document.getElementById('contact-message').value}`
-    window.open(`https://wa.me/254768927893?text=${message}`, '_blank')
+    window.open(`https://wa.me/254712345678?text=${message}`, '_blank')
     alert('✅ Message sent! We will reply on WhatsApp shortly.')
     e.target.reset()
 }
@@ -440,7 +440,7 @@ function toggleMobileMenu() {
 // =============== TOAST ===============
 function showToast(text) {
     const toast = document.createElement('div')
-    toast.style.cssText = 'position:fixed; bottom:80px; right:20px; background:#f97316; color:white; padding:16px 24px; border-radius:9999px; box-shadow:0 10px 15px -3px rgb(0 0 0 / 0.3); z-index:99999; animation: toastIn 0.3s, toastOut 0.3s 2.7s forwards;'
+    toast.style.cssText = 'position:fixed; bottom:80px; right:20px; background:#e63939; color:white; padding:16px 24px; border-radius:9999px; box-shadow:0 10px 15px -3px rgb(0 0 0 / 0.3); z-index:99999; animation: toastIn 0.3s, toastOut 0.3s 2.7s forwards;'
     toast.innerHTML = `${text} <i class="fa-solid fa-check ml-2"></i>`
     document.body.appendChild(toast)
     setTimeout(() => toast.remove(), 3000)
@@ -479,6 +479,7 @@ function init() {
         renderCart()
     }
     
-    console.log('%c🚗 EMCA MOTORS LIMITED website ready – fully functional & SEO optimized!', 'background:#f97316;color:#fff;padding:8px 12px;border-radius:4px;font-size:11px;font-weight:bold')
+    console.log('%c🚗 EMCA MOTORS LIMITED website ready – fully functional & SEO optimized!', 'background:#e63939;color:#fff;padding:2px 6px;border-radius:2px;font-size:10px')
+}
 
 window.onload = init
