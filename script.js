@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // =============== GLOBAL DATA ===============
 const products = [
-    { id: 1, name: "Toyota Oil Filter", category: "Oil Filters", price: 450, desc: "Genuine OEM filter for Hilux, Prado & Land Cruiser", img: "https://picsum.photos/id/1015/300/200" },
+    { id: 1, name: "Toyota Oil Filter", category: "Oil Filters", desc: "Genuine OEM filter for Hilux, Prado & Land Cruiser", img: "image/oilfilter1.jpeg" },
     { id: 2, name: "Mann Oil Filter", category: "Oil Filters", price: 380, desc: "Premium German quality for most diesel engines", img: "https://picsum.photos/id/20/300/200" },
     { id: 3, name: "K&N Air Filter", category: "Air Filters", price: 1250, desc: "High-performance reusable air filter", img: "https://picsum.photos/id/201/300/200" },
     { id: 4, name: "Bosch Air Filter", category: "Air Filters", price: 720, desc: "For Toyota, Isuzu & Mitsubishi vehicles", img: "https://picsum.photos/id/251/300/200" },
