@@ -15,7 +15,8 @@
     box-shadow: 0 10px 15px -3px rgb(249 115 22);
 }
 .h-10 w-auto {
-    transform: scale(1.5);
+   width: 300px;
+    height: auto;
 }
 
 .product-card {
