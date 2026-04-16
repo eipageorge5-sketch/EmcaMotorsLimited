@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional garage services in Lodwar: Wheel alignment, engine service, car diagnostics, painting &amp; more at EMCA MOTORS LIMITED.">
+    <title>EMCA MOTORS LIMITED | Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-zinc-950 text-white" data-page="services">
+    <!-- NAVBAR same as above (omitted for space) -->
+    <nav class="bg-black sticky top-0 z-50 border-b border-red-600">
+        <!-- Copy of navbar from index.html -->
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-x-2">
+                    <div class="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center text-2xl font-bold">🚗</div>
+                    <h1 class="text-2xl font-black tracking-tighter">EMCA MOTORS</h1>
+                </div>
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="index.html">HOME</a>
+                    <a href="shop.html">SHOP</a>
+                    <a href="services.html" class="text-red-500">SERVICES</a>
+                    <a href="about.html">ABOUT</a>
+                    <a href="pricing.html">PRICING</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="contact.html">CONTACT</a>
+                </div>
+                <div class="flex items-center gap-x-4">
+                    <a href="cart.html" class="relative"><i class="fa-solid fa-cart-shopping text-xl"></i><span id="cart-count-nav" class="absolute -top-1 -right-1 bg-red-600 text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">0</span></a>
+                    <a href="https://wa.me/254712345678" target="_blank" class="bg-green-500 px-4 py-2 rounded-full text-sm flex items-center gap-2"><i class="fa-brands fa-whatsapp"></i>WHATSAPP</a>
+                    <button onclick="toggleMobileMenu()" class="md:hidden"><i class="fa-solid fa-bars text-2xl" id="mobile-menu-icon"></i></button>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+    </nav>
 
+    <div class="max-w-7xl mx-auto px-4 py-12">
+        <h1 class="text-5xl font-black mb-3">Our Services</h1>
+        <p class="text-zinc-400 mb-10">Expert automotive care in Lodwar – book instantly</p>
+
+        <div id="services-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Populated by JS with service cards + Book button -->
+        </div>
+
+        <!-- BOOKING FORM -->
+        <div class="mt-16 bg-zinc-900 rounded-3xl p-8 md:p-12">
+            <h2 class="text-3xl font-semibold mb-6">Book Your Service Now</h2>
+            <form id="booking-form" onsubmit="handleBooking(event)" class="grid md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm mb-2">Full Name</label>
+                    <input type="text" id="book-name" required class="w-full bg-white/10 border border-white/30 rounded-2xl px-5 py-4">
+                </div>
+                <div>
+                    <label class="block text-sm mb-2">Phone Number</label>
+                    <input type="tel" id="book-phone" value="+254" required class="w-full bg-white/10 border border-white/30 rounded-2xl px-5 py-4">
+                </div>
+                <div>
+                    <label class="block text-sm mb-2">Car Model &amp; Year</label>
+                    <input type="text" id="book-car" placeholder="e.g. Toyota Hilux 2022" required class="w-full bg-white/10 border border-white/30 rounded-2xl px-5 py-4">
+                </div>
+                <div>
+                    <label class="block text-sm mb-2">Service Needed</label>
+                    <select id="book-service" class="w-full bg-white/10 border border-white/30 rounded-2xl px-5 py-4">
+                        <!-- populated by JS -->
+                    </select>
+                </div>
+                <div class="md:col-span-2">
+                    <label class="block text-sm mb-2">Preferred Date &amp; Time</label>
+                    <input type="datetime-local" id="book-date" required class="w-full bg-white/10 border border-white/30 rounded-2xl px-5 py-4">
+                </div>
+                <div class="md:col-span-2">
+                    <button type="submit" 
+                            class="w-full bg-red-600 hover:bg-red-700 py-5 text-lg font-semibold rounded-2xl flex items-center justify-center gap-x-3">
+                        <i class="fa-solid fa-calendar-check"></i> CONFIRM BOOKING &amp; GET WHATSAPP CONFIRMATION
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="bg-black pt-12 pb-8 border-t border-zinc-800">
+        <!-- footer identical to index -->
+    </footer>
+
+    <a href="https://wa.me/254712345678?text=Hello%20EMCA%20Motors%2C%20I%20just%20booked%20a%20service" target="_blank" class="fixed bottom-8 right-8 bg-green-500 w-14 h-14 rounded-2xl flex items-center justify-center text-4xl shadow-2xl">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</body>
+</html>
