@@ -28,26 +28,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // =============== GLOBAL DATA ===============
 const products = [
-    { id: 1, name: "Toyota Oil Filter", category: "Oil Filters", desc: "Genuine OEM filter for Hilux, Prado & Land Cruiser", img: "image/oilfilter1.jpeg" },
-    { id: 2, name: "Mann Oil Filter", category: "Oil Filters", price: 380, desc: "Premium German quality for most diesel engines", img: "https://picsum.photos/id/20/300/200" },
-    { id: 3, name: "K&N Air Filter", category: "Air Filters", price: 1250, desc: "High-performance reusable air filter", img: "https://picsum.photos/id/201/300/200" },
-    { id: 4, name: "Bosch Air Filter", category: "Air Filters", price: 720, desc: "For Toyota, Isuzu & Mitsubishi vehicles", img: "https://picsum.photos/id/251/300/200" },
-    { id: 5, name: "Fuel Filter for Hilux", category: "Fuel Filters", price: 890, desc: "Diesel fuel filter – water separator", img: "https://picsum.photos/id/1005/300/200" },
-    { id: 6, name: "Mann Fuel Filter", category: "Fuel Filters", price: 650, desc: "Heavy-duty filtration", img: "https://picsum.photos/id/133/300/200" },
-    { id: 7, name: "Bosch Brake Pads (Front)", category: "Brake Pads", price: 2450, desc: "Set of 4 pads – quiet & long lasting", img: "https://picsum.photos/id/1009/300/200" },
-    { id: 8, name: "Textar Brake Pads", category: "Brake Pads", price: 1890, desc: "European quality brake pads", img: "https://picsum.photos/id/1016/300/200" },
-    { id: 9, name: "Shell Helix Ultra 5W-40", category: "Motor Oils", price: 1850, desc: "5 litres – fully synthetic", img: "https://picsum.photos/id/160/300/200" },
-    { id: 10, name: "Total Quartz 10W-40", category: "Motor Oils", price: 1350, desc: "4 litres semi-synthetic", img: "https://picsum.photos/id/180/300/200" },
-    { id: 11, name: "Varta 75Ah Battery", category: "Batteries", price: 8900, desc: "Maintenance-free car battery", img: "https://picsum.photos/id/201/300/200" },
-    { id: 12, name: "Delkor 100Ah Battery", category: "Batteries", price: 11200, desc: "Heavy duty for matatus & trucks", img: "https://picsum.photos/id/251/300/200" },
-    { id: 13, name: "Dunlop 205/65R16 Tyre", category: "Tyres", price: 6800, desc: "All-season radial tyre", img: "https://picsum.photos/id/1005/300/200" },
-    { id: 14, name: "Bridgestone 265/70R16", category: "Tyres", price: 9200, desc: "Premium off-road tyre", img: "https://picsum.photos/id/133/300/200" },
-    { id: 15, name: "Shock Absorber (Front)", category: "Suspension Parts", price: 3200, desc: "Monroe gas shock – pair", img: "https://picsum.photos/id/160/300/200" },
-    { id: 16, name: "Coil Spring Set", category: "Suspension Parts", price: 4800, desc: "Heavy-duty for Hilux", img: "https://picsum.photos/id/180/300/200" },
-    { id: 17, name: "Timing Belt Kit", category: "Engine Parts", price: 6500, desc: "Complete kit with tensioner", img: "https://picsum.photos/id/1009/300/200" },
-    { id: 18, name: "Water Pump Toyota", category: "Engine Parts", price: 4200, desc: "Genuine Toyota water pump", img: "https://picsum.photos/id/1016/300/200" },
-    { id: 19, name: "Spark Plugs Set", category: "Other Garage Spare Parts", price: 1200, desc: "NGK iridium plugs – set of 4", img: "https://picsum.photos/id/201/300/200" },
-    { id: 20, name: "Radiator Hose Kit", category: "Other Garage Spare Parts", price: 950, desc: "Upper & lower radiator hoses", img: "https://picsum.photos/id/251/300/200" }
+    { id: 1, name: "Toyota Oil Filter", category: "Oil Filters", price: 380, desc: "Genuine OEM filter for Hilux, Prado & Land Cruiser", img: "image/oilfilter5.jpeg" },
+    { id: 2, name: "Bosch Oil Filter", category: "Oil Filters", price: 380, desc: "Modern V6 Pinpoints its primary use in the popular 4.0L (1GR-FE) petrol engines found in Prado and Land Cruiser 70/200 series", img: "image/oilfilter1.jpeg" },
+    { id: 3, name: "K&N Air Filter", category: "Oil Filters", price: 1250, desc: "High-efficiency compact catrigde for Corolla, Priu & RAV4", img: "image/oilfilter4.jpeg" },
+    { id: 4, name: "Oil Filter", category: "Oil Filters", price: 380, desc: "Premium high-flow element for V8(1UR/3UR) petrol engines", img: "image/oilfilter3.jpeg" },
+    { id: 5, name: "Toyota Oil Filter", category: "Oil Filters", price: 380, desc: "High-performance oil filter element for prado V6, Hilux, and Avalon", img: "image/oilfilter2.jpeg" },
+    { id: 6, name: "Bosch Air Filter", category: "Air Filters", price: 720, desc: "For Toyota, Isuzu & Mitsubishi vehicles", img: "https://picsum.photos/id/251/300/200" },
+    { id: 7, name: "Fuel Filter for Hilux", category: "Fuel Filters", price: 890, desc: "Diesel fuel filter – water separator", img: "https://picsum.photos/id/1005/300/200" },
+    { id: 8, name: "Mann Fuel Filter", category: "Fuel Filters", price: 650, desc: "Heavy-duty filtration", img: "https://picsum.photos/id/133/300/200" },
+    { id: 9, name: "Bosch Brake Pads (Front)", category: "Brake Pads", price: 2450, desc: "Set of 4 pads – quiet & long lasting", img: "https://picsum.photos/id/1009/300/200" },
+    { id: 10, name: "Textar Brake Pads", category: "Brake Pads", price: 1890, desc: "European quality brake pads", img: "https://picsum.photos/id/1016/300/200" },
+    { id: 11, name: "Shell Helix Ultra 5W-40", category: "Motor Oils", price: 1850, desc: "5 litres – fully synthetic", img: "https://picsum.photos/id/160/300/200" },
+    { id: 12, name: "Total Quartz 10W-40", category: "Motor Oils", price: 1350, desc: "4 litres semi-synthetic", img: "https://picsum.photos/id/180/300/200" },
+    { id: 13, name: "Varta 75Ah Battery", category: "Batteries", price: 8900, desc: "Maintenance-free car battery", img: "https://picsum.photos/id/201/300/200" },
+    { id: 14, name: "Delkor 100Ah Battery", category: "Batteries", price: 11200, desc: "Heavy duty for matatus & trucks", img: "https://picsum.photos/id/251/300/200" },
+    { id: 15, name: "Dunlop 205/65R16 Tyre", category: "Tyres", price: 6800, desc: "All-season radial tyre", img: "https://picsum.photos/id/1005/300/200" },
+    { id: 16, name: "Bridgestone 265/70R16", category: "Tyres", price: 9200, desc: "Premium off-road tyre", img: "https://picsum.photos/id/133/300/200" },
+    { id: 17, name: "Shock Absorber (Front)", category: "Suspension Parts", price: 3200, desc: "Monroe gas shock – pair", img: "https://picsum.photos/id/160/300/200" },
+    { id: 18, name: "Coil Spring Set", category: "Suspension Parts", price: 4800, desc: "Heavy-duty for Hilux", img: "https://picsum.photos/id/180/300/200" },
+    { id: 19, name: "Timing Belt Kit", category: "Engine Parts", price: 6500, desc: "Complete kit with tensioner", img: "https://picsum.photos/id/1009/300/200" },
+    { id: 20, name: "Water Pump Toyota", category: "Engine Parts", price: 4200, desc: "Genuine Toyota water pump", img: "https://picsum.photos/id/1016/300/200" },
+    { id: 21, name: "Spark Plugs Set", category: "Other Garage Spare Parts", price: 1200, desc: "NGK iridium plugs – set of 4", img: "https://picsum.photos/id/201/300/200" },
+    { id: 22, name: "Radiator Hose Kit", category: "Other Garage Spare Parts", price: 950, desc: "Upper & lower radiator hoses", img: "https://picsum.photos/id/251/300/200" }
 ]
 
 const servicesData = [
