@@ -1,8 +1,10 @@
-/* style.css */
+/* style.css - Updated for EMCA Motors (Orange Theme) */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Custom Styles */
 :root {
     --primary-color: #f97316; /* Orange */
 }
@@ -10,20 +12,45 @@
 .category-btn.active {
     background-color: #f97316;
     color: white;
+    box-shadow: 0 10px 15px -3px rgb(249 115 22);
 }
 
+.product-card {
+    transition: all 0.3s ease;
+}
 .product-card:hover {
+    transform: translateY(-8px);
     border-color: #f97316;
-    transform: translateY(-4px);
 }
 
-.bg-orange-600 { background-color: #f97316; }
-.text-orange-500 { color: #f97316; }
-.border-orange-600 { border-color: #f97316; }
-
+/* Fade In Animation */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { 
+        opacity: 0; 
+        transform: translateY(20px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
 }
 
-/* Tailwind script is initialized in script.js */
+/* Apply fade in to product cards and service cards */
+.product-card,
+.service-card {
+    animation: fadeIn 0.6s ease forwards;
+}
+
+/* Optional: Staggered animation for multiple items */
+.product-card:nth-child(1) { animation-delay: 0.1s; }
+.product-card:nth-child(2) { animation-delay: 0.2s; }
+.product-card:nth-child(3) { animation-delay: 0.3s; }
+.product-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Navbar & Logo */
+nav img {
+    transition: transform 0.3s ease;
+}
+nav img:hover {
+    transform: scale(1.05);
+}
