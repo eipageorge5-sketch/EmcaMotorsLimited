@@ -35,8 +35,8 @@ const products = [
     { id: 5, name: "Bosch Air Filter", category: "Air Filters", price:1800, desc: "For Toyota, Isuzu & Mitsubishi vehicles", img: "image/airfilter3.jpeg" },
     { id: 6, name: "Air Filter", category: "Air Filters", price:1500, desc: "For Toyota, Isuzu  vehicles", img: "image/airfilter2.jpeg" }, 
     
-    { id: 6, name: "Fuel Filter for Hilux", category: "Fuel Filters", price: 890, desc: "Diesel fuel filter – water separator", img: "https://picsum.photos/id/1005/300/200" },
-    { id: 7, name: "Mann Fuel Filter", category: "Fuel Filters", price: 650, desc: "Heavy-duty filtration", img: "https://picsum.photos/id/133/300/200" },
+    { id: 6, name: "Fuel Filter Toyota genuine", category: "Fuel Filters", price: 2500, desc: "Diesel fuel filter – water separator", img: "image/fuel1.jpeg" },
+    { id: 7, name: "Mann Fuel Filter", category: "Fuel Filters", price: 2000, desc: "Heavy-duty filtration", img: "image/fuel2.jpeg" },
     { id: 9, name: "Bosch Brake Pads (Front)", category: "Brake Pads", price: 2450, desc: "Set of 4 pads – quiet & long lasting", img: "https://picsum.photos/id/1009/300/200" },
     { id: 10, name: "Textar Brake Pads", category: "Brake Pads", price: 1890, desc: "European quality brake pads", img: "https://picsum.photos/id/1016/300/200" },
     { id: 11, name: "Shell Helix Ultra 5W-40", category: "Motor Oils", price: 1850, desc: "5 litres – fully synthetic", img: "https://picsum.photos/id/160/300/200" },
