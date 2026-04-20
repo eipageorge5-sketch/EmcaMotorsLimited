@@ -29,9 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
 // =============== GLOBAL DATA ===============
 const products = [
     { id: 1, name: "Toyota Oil Filter", category: "Oil Filters", price: 1500, desc: "Genuine OEM filter for Hilux, Prado & Land Cruiser", img: "image/oilfilter5.jpeg" },
-    { id: 3, name: "K&N Air Filter", category: "Oil Filters", price: 1200, desc: "High-efficiency compact catrigde for Corolla, Priu & RAV4", img: "image/oilfilter4.jpeg" },
-    { id: 4, name: "Oil Filter", category: "Oil Filters", price: 1500, desc: "Premium high-flow element for V8(1UR/3UR) petrol engines", img: "image/oilfilter3.jpeg" },
-    { id: 5, name: "Toyota Oil Filter", category: "Oil Filters", price: 1000, desc: "High-performance oil filter element for prado V6, Hilux, and Avalon", img: "image/oilfilter2.jpeg" },
+    { id: 2, name: "K&N Air Filter", category: "Oil Filters", price: 1200, desc: "High-efficiency compact catrigde for Corolla, Priu & RAV4", img: "image/oilfilter4.jpeg" },
+    { id: 3, name: "Oil Filter", category: "Oil Filters", price: 1500, desc: "Premium high-flow element for V8(1UR/3UR) petrol engines", img: "image/oilfilter3.jpeg" },
+    { id: 4, name: "Toyota Oil Filter", category: "Oil Filters", price: 1000, desc: "High-performance oil filter element for prado V6, Hilux, and Avalon", img: "image/oilfilter2.jpeg" },
+
+
+    
     { id: 6, name: "Bosch Air Filter", category: "Air Filters", price: 720, desc: "For Toyota, Isuzu & Mitsubishi vehicles", img: "https://picsum.photos/id/251/300/200" },
     { id: 7, name: "Fuel Filter for Hilux", category: "Fuel Filters", price: 890, desc: "Diesel fuel filter – water separator", img: "https://picsum.photos/id/1005/300/200" },
     { id: 8, name: "Mann Fuel Filter", category: "Fuel Filters", price: 650, desc: "Heavy-duty filtration", img: "https://picsum.photos/id/133/300/200" },
