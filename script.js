@@ -39,6 +39,7 @@ const products = [
     { id: 9, name: "Bosch Brake Pads (Front)", category: "Brake Pads", price: 2450, desc: "Set of 4 pads – quiet & long lasting", img: "image/pad1.jpeg" },
     { id: 10, name: "Textar Brake Pads", category: "Brake Pads", price: 1890, desc: "European quality brake pads", img: "image/pad2.jpeg" },
     { id: 11, name: "Synthetic Lexus 5W-40", category: "Motor Oils", price: 4000, desc: "4 litres – fully synthetic", img: "image/motoroil2.jpeg" },
+     { id: 11, name: "Japan Eneos Motor Oil 5W-40", category: "Eneos Oils", price: 3000, desc: "4 litres – fully synthetic", img: "image/motoroil3.jpeg" },
     { id: 11, name: "Toyota SL/CF 15W-40", category: "Motor Oils", price: 3000, desc: "5 litres – fully synthetic", img: "image/motoroil2.jpeg" },
     { id: 12, name: "Total Quartz 10W-40", category: "Motor Oils", price: 1350, desc: "4 litres semi-synthetic", img: "image/motoroil1.jpeg" },
     
