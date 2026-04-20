@@ -35,10 +35,12 @@ const products = [
     { id: 5, name: "Bosch Air Filter", category: "Air Filters", price:1800, desc: "For Toyota, Isuzu & Mitsubishi vehicles", img: "image/airfilter3.jpeg" },
     { id: 6, name: "Air Filter", category: "Air Filters", price:1500, desc: "For Toyota, Isuzu  vehicles", img: "image/airfilter2.jpeg" }, 
     
-    { id: 6, name: "Fuel Filter Toyota genuine", category: "Fuel Filters", price: 2500, desc: "Diesel fuel filter – water separator", img: "image/fuel1.jpeg" },
-    { id: 7, name: "Mann Fuel Filter", category: "Fuel Filters", price: 2000, desc: "Heavy-duty filtration", img: "image/fuel2.jpeg" },
-    { id: 9, name: "Bosch Brake Pads (Front)", category: "Brake Pads", price: 2450, desc: "Set of 4 pads – quiet & long lasting", img: "https://picsum.photos/id/1009/300/200" },
-    { id: 10, name: "Textar Brake Pads", category: "Brake Pads", price: 1890, desc: "European quality brake pads", img: "https://picsum.photos/id/1016/300/200" },
+    { id: 7, name: "Fuel Filter Toyota genuine", category: "Fuel Filters", price: 2500, desc: "Diesel fuel filter – water separator", img: "image/fuel1.jpeg" },
+    { id: 8, name: "Mann Fuel Filter", category: "Fuel Filters", price: 1500, desc: "Heavy-duty filtration", img: "image/fuel2.jpeg" },
+    
+    { id: 9, name: "Bosch Brake Pads (Front)", category: "Brake Pads", price: 2450, desc: "Set of 4 pads – quiet & long lasting", img: "image/pad1.jpeg" },
+    { id: 10, name: "Textar Brake Pads", category: "Brake Pads", price: 1890, desc: "European quality brake pads", img: "image/pad2.jpeg" },
+    
     { id: 11, name: "Shell Helix Ultra 5W-40", category: "Motor Oils", price: 1850, desc: "5 litres – fully synthetic", img: "https://picsum.photos/id/160/300/200" },
     { id: 12, name: "Total Quartz 10W-40", category: "Motor Oils", price: 1350, desc: "4 litres semi-synthetic", img: "https://picsum.photos/id/180/300/200" },
     { id: 13, name: "Varta 75Ah Battery", category: "Batteries", price: 8900, desc: "Maintenance-free car battery", img: "https://picsum.photos/id/201/300/200" },
