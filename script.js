@@ -146,7 +146,7 @@ function renderCart() {
                     </div>
                     <div class="text-right">
                         <div class="font-bold text-xl">KES ${(item.price * qty).toLocaleString()}</div>
-                        <button onclick="removeFromCart(${item.id})" class="text-xs text-red-400 hover:text-red-300 mt-1">Remove</button>
+                        <button onclick="removeFromCart(${item.id})" class="text-xs text-orange-400 hover:text-orange-300 mt-1">Remove</button>
                     </div>
                 </div>
             </div>
