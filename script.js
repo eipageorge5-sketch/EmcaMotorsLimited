@@ -43,10 +43,6 @@ const products = [
     { id: 11, name: "Toyota SL/CF 15W-40", category: "Motor Oils", price: 3000, desc: "5 litres – fully synthetic", img: "image/motoroil2.jpeg" },
     { id: 12, name: "Total Quartz 10W-40", category: "Motor Oils", price: 1350, desc: "4 litres semi-synthetic", img: "image/motoroil1.jpeg" },
     
-    { id: 13, name: "Varta 75Ah Battery", category: "Batteries", price: 8900, desc: "Maintenance-free car battery", img: "https://picsum.photos/id/201/300/200" },
-    { id: 14, name: "Delkor 100Ah Battery", category: "Batteries", price: 11200, desc: "Heavy duty for matatus & trucks", img: "https://picsum.photos/id/251/300/200" },
-    { id: 15, name: "Dunlop 205/65R16 Tyre", category: "Tyres", price: 6800, desc: "All-season radial tyre", img: "https://picsum.photos/id/1005/300/200" },
-    { id: 16, name: "Bridgestone 265/70R16", category: "Tyres", price: 9200, desc: "Premium off-road tyre", img: "https://picsum.photos/id/133/300/200" },
     { id: 17, name: "Shock Absorber (Front)", category: "Suspension Parts", price: 3200, desc: "Monroe gas shock – pair", img: "https://picsum.photos/id/160/300/200" },
     { id: 18, name: "Coil Spring Set", category: "Suspension Parts", price: 4800, desc: "Heavy-duty for Hilux", img: "https://picsum.photos/id/180/300/200" },
     { id: 19, name: "Timing Belt Kit", category: "Engine Parts", price: 6500, desc: "Complete kit with tensioner", img: "https://picsum.photos/id/1009/300/200" },
