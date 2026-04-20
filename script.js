@@ -43,6 +43,7 @@ const products = [
     
     { id: 11, name: "Shell Helix Ultra 5W-40", category: "Motor Oils", price: 1850, desc: "5 litres – fully synthetic", img: "https://picsum.photos/id/160/300/200" },
     { id: 12, name: "Total Quartz 10W-40", category: "Motor Oils", price: 1350, desc: "4 litres semi-synthetic", img: "https://picsum.photos/id/180/300/200" },
+    
     { id: 13, name: "Varta 75Ah Battery", category: "Batteries", price: 8900, desc: "Maintenance-free car battery", img: "https://picsum.photos/id/201/300/200" },
     { id: 14, name: "Delkor 100Ah Battery", category: "Batteries", price: 11200, desc: "Heavy duty for matatus & trucks", img: "https://picsum.photos/id/251/300/200" },
     { id: 15, name: "Dunlop 205/65R16 Tyre", category: "Tyres", price: 6800, desc: "All-season radial tyre", img: "https://picsum.photos/id/1005/300/200" },
