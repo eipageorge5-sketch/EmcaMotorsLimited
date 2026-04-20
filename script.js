@@ -43,8 +43,8 @@ const products = [
     { id: 11, name: "Toyota SL/CF 15W-40", category: "Motor Oils", price: 3000, desc: "5 litres – fully synthetic", img: "image/motoroil2.jpeg" },
     { id: 12, name: "Total Quartz 10W-40", category: "Motor Oils", price: 1350, desc: "4 litres semi-synthetic", img: "image/motoroil1.jpeg" },
     
-    { id: 17, name: "Shock Absorber (Front)", category: "Suspension Parts", price: 3200, desc: "Monroe gas shock – pair", img: "https://picsum.photos/id/160/300/200" },
-    { id: 18, name: "Coil Spring Set", category: "Suspension Parts", price: 4800, desc: "Heavy-duty for Hilux", img: "https://picsum.photos/id/180/300/200" },
+    { id: 17, name: "Shock Absorber (Front)", category: "Suspension Parts", price: 7500, desc: "Monroe gas shock – pair", img: "image/shock1.jpeg" },
+    { id: 18, name: "Coil Spring Set", category: "Suspension Parts", price: 15800, desc: "Heavy-duty for Hilux", img: "image/shock2.jpeg" },
     { id: 19, name: "Timing Belt Kit", category: "Engine Parts", price: 6500, desc: "Complete kit with tensioner", img: "https://picsum.photos/id/1009/300/200" },
     { id: 20, name: "Water Pump Toyota", category: "Engine Parts", price: 4200, desc: "Genuine Toyota water pump", img: "https://picsum.photos/id/1016/300/200" },
     { id: 21, name: "Spark Plugs Set", category: "Other Garage Spare Parts", price: 1200, desc: "NGK iridium plugs – set of 4", img: "https://picsum.photos/id/201/300/200" },
