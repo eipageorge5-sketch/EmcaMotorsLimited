@@ -32,10 +32,9 @@ const products = [
     { id: 2, name: "K&N Air Filter", category: "Oil Filters", price: 1200, desc: "High-efficiency compact catrigde for Corolla, Priu & RAV4", img: "image/oilfilter4.jpeg" },
     { id: 3, name: "Oil Filter", category: "Oil Filters", price: 1500, desc: "Premium high-flow element for V8(1UR/3UR) petrol engines", img: "image/oilfilter3.jpeg" },
     { id: 4, name: "Toyota Oil Filter", category: "Oil Filters", price: 1000, desc: "High-performance oil filter element for prado V6, Hilux, and Avalon", img: "image/oilfilter2.jpeg" },
-
-
+    { id: 5, name: "Bosch Air Filter", category: "Air Filters", price:1800, desc: "For Toyota, Isuzu & Mitsubishi vehicles", img: "image/airfilter3.jpeg" },
+    { id: 6, name: "Air Filter", category: "Air Filters", price:1500, desc: "For Toyota, Isuzu  vehicles", img: "image/airfilter2.jpeg" }, 
     
-    { id: 5, name: "Bosch Air Filter", category: "Air Filters", price: 720, desc: "For Toyota, Isuzu & Mitsubishi vehicles", img: "https://picsum.photos/id/251/300/200" },
     { id: 6, name: "Fuel Filter for Hilux", category: "Fuel Filters", price: 890, desc: "Diesel fuel filter – water separator", img: "https://picsum.photos/id/1005/300/200" },
     { id: 7, name: "Mann Fuel Filter", category: "Fuel Filters", price: 650, desc: "Heavy-duty filtration", img: "https://picsum.photos/id/133/300/200" },
     { id: 9, name: "Bosch Brake Pads (Front)", category: "Brake Pads", price: 2450, desc: "Set of 4 pads – quiet & long lasting", img: "https://picsum.photos/id/1009/300/200" },
