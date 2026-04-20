@@ -38,9 +38,9 @@ const products = [
     { id: 8, name: "Mann Fuel Filter", category: "Fuel Filters", price: 1500, desc: "Heavy-duty filtration", img: "image/fuel2.jpeg" },
     { id: 9, name: "Bosch Brake Pads (Front)", category: "Brake Pads", price: 2450, desc: "Set of 4 pads – quiet & long lasting", img: "image/pad1.jpeg" },
     { id: 10, name: "Textar Brake Pads", category: "Brake Pads", price: 1890, desc: "European quality brake pads", img: "image/pad2.jpeg" },
-    
-    { id: 11, name: "Shell Helix Ultra 5W-40", category: "Motor Oils", price: 1850, desc: "5 litres – fully synthetic", img: "image/motoroil1.jpeg" },
-    { id: 12, name: "Total Quartz 10W-40", category: "Motor Oils", price: 1350, desc: "4 litres semi-synthetic", img: "image/motoroil2.jpeg" },
+    { id: 11, name: "Synthetic Lexus 5W-40", category: "Motor Oils", price: 4000, desc: "4 litres – fully synthetic", img: "image/motoroil2.jpeg" },
+    { id: 11, name: "Toyota SL/CF 15W-40", category: "Motor Oils", price: 3000, desc: "5 litres – fully synthetic", img: "image/motoroil2.jpeg" },
+    { id: 12, name: "Total Quartz 10W-40", category: "Motor Oils", price: 1350, desc: "4 litres semi-synthetic", img: "image/motoroil1.jpeg" },
     
     { id: 13, name: "Varta 75Ah Battery", category: "Batteries", price: 8900, desc: "Maintenance-free car battery", img: "https://picsum.photos/id/201/300/200" },
     { id: 14, name: "Delkor 100Ah Battery", category: "Batteries", price: 11200, desc: "Heavy duty for matatus & trucks", img: "https://picsum.photos/id/251/300/200" },
