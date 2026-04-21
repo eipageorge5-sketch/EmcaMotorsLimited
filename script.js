@@ -46,7 +46,7 @@ const products = [
     { id: 16, name: "Coil Spring Set", category: "Suspension Parts", price: 15800, desc: "Heavy-duty for Hilux", img: "image/shock2.jpeg" },
     { id: 17, name: "Timing Belt Kit", category: "Engine Parts", price: 5550, desc: "Complete kit with tensioner", img: "image/belt.jpeg" },
     { id: 18, name: "Spark Plugs Set", category: "Other Garage Spare Parts", price: 1200, desc: "NGK iridium plugs – set of 4", img: "image/spark.jpeg" },
-    { id: 19, name: "Radiator Hose Kit", category: "Other Garage Spare Parts", price: 950, desc: "Upper & lower radiator hoses", img: "https://picsum.photos/id/251/300/200" }
+    { id: 19, name: "Nissan Clutch Cover", category: "Other Garage Spare Parts", price: 9500, desc: "Super clutch plate", img: "image/clutch.jpeg" }
 ]
 
 const servicesData = [
