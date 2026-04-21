@@ -337,56 +337,41 @@ function renderPricing() {
     container.innerHTML = html
 }
 
-
-// Wrap everything in an Event Listener to ensure the page is ready
+// =============== FAQ PAGE ===============
 document.addEventListener('DOMContentLoaded', () => {
-    const container = document.getElementById('faq-list');
-    if (!container) return;
+    const faqContainer = document.getElementById('faq-list');
 
-    const faqs = [
-        { q: "Do you stock genuine Toyota parts?", a: "Yes! All our parts are sourced directly from authorized distributors in Kenya." },
-        { q: "How fast is your service?", a: "Most oil changes and alignments are completed within 90 minutes." },
-        { q: "Do I need an appointment for alignment or balancing?", a: "While we accept walk-ins for parts purchases, we recommend booking an appointment for alignment, balancing, or mechanical repairs to ensure minimal wait time." },
-        { q: "What is the difference between wheel alignment and balancing?", a: "Alignment adjusts the angles of the wheels to manufacturer specs, while balancing corrects weight distribution around the wheel to prevent steering wheel vibrations." },
-        { q: "Do you deliver outside Lodwar?", a: "Currently, our delivery services are exclusively available within Lodwar town. This allows us to ensure the fastest delivery times and maintain the quality of our service for our local customers." },
-        { q: "Is cash on delivery available?", a: "Absolutely. You can also pay via M-Pesa or bank transfer." }
-    ];
+    if (faqContainer) {
+        faqContainer.addEventListener('click', (e) => {
+            // 1. Find the FAQ item that was clicked
+            const item = e.target.closest('.faq-item');
+            if (!item) return;
 
-    // Build the HTML
-    let html = '';
-    faqs.forEach((faq) => {
-        html += `
-        <div class="faq-item bg-white/5 border border-white/10 rounded-3xl px-8 py-6 cursor-pointer mb-4">
-            <div class="flex justify-between items-center pointer-events-none">
-                <h4 class="font-semibold text-white">${faq.q}</h4>
-                <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
-            </div>
-            <!-- The 'style' attribute ensures it's hidden by default even if CSS fails -->
-            <div class="faq-answer mt-6 text-zinc-400" style="display: none;">
-                ${faq.a}
-            </div>
-        </div>`;
-    });
-    container.innerHTML = html;
+            // 2. Select the answer and the icon inside the clicked item
+            const answer = item.querySelector('.faq-answer');
+            const icon = item.querySelector('.fa-chevron-down');
 
-    // Handle clicks
-    container.addEventListener('click', (e) => {
-        const item = e.target.closest('.faq-item');
-        if (!item) return;
+            // 3. Close all OTHER open FAQs (Optional - for accordion effect)
+            document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
+                if (otherAnswer !== answer) {
+                    otherAnswer.classList.remove('show');
+                    otherAnswer.parentElement.querySelector('.fa-chevron-down').classList.remove('rotate-180');
+                }
+            });
 
-        const answer = item.querySelector('.faq-answer');
-        const icon = item.querySelector('.fa-chevron-down');
-
-        // Toggle display directly to avoid CSS class issues
-        if (answer.style.display === "none") {
-            answer.style.display = "block";
-            icon.style.transform = "rotate(180deg)";
-        } else {
-            answer.style.display = "none";
-            icon.style.transform = "rotate(0deg)";
-        }
-    });
+            // 4. Toggle the clicked one
+            const isOpen = answer.classList.toggle('show');
+            
+            // 5. Rotate the icon
+            if (isOpen) {
+                icon.classList.add('rotate-180');
+            } else {
+                icon.classList.remove('rotate-180');
+            }
+        });
+    }
 });
+
 
 
 
