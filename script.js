@@ -337,8 +337,9 @@ function renderPricing() {
     container.innerHTML = html
 }
 
-// =============== FAQ PAGE ===============
-function renderFAQ() {
+
+// Wrap everything in an Event Listener to ensure the page is ready
+document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('faq-list');
     if (!container) return;
 
@@ -351,49 +352,41 @@ function renderFAQ() {
         { q: "Is cash on delivery available?", a: "Absolutely. You can also pay via M-Pesa or bank transfer." }
     ];
 
-    // 1. Generate the HTML structure
+    // Build the HTML
     let html = '';
     faqs.forEach((faq) => {
         html += `
-        <div class="faq-item bg-white/5 border border-white/10 rounded-3xl px-8 py-6 cursor-pointer mb-4 transition-all duration-300">
-            <div class="flex justify-between items-center">
+        <div class="faq-item bg-white/5 border border-white/10 rounded-3xl px-8 py-6 cursor-pointer mb-4">
+            <div class="flex justify-between items-center pointer-events-none">
                 <h4 class="font-semibold text-white">${faq.q}</h4>
                 <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
             </div>
-            <div class="faq-answer hidden mt-6 text-zinc-400">
+            <!-- The 'style' attribute ensures it's hidden by default even if CSS fails -->
+            <div class="faq-answer mt-6 text-zinc-400" style="display: none;">
                 ${faq.a}
             </div>
         </div>`;
     });
-
     container.innerHTML = html;
 
-    // 2. Add a single Event Listener for all FAQ items
+    // Handle clicks
     container.addEventListener('click', (e) => {
-        // Find the closest parent that is a FAQ item
         const item = e.target.closest('.faq-item');
         if (!item) return;
 
         const answer = item.querySelector('.faq-answer');
         const icon = item.querySelector('.fa-chevron-down');
 
-        // Toggle the 'hidden' class on the answer
-        const isHidden = answer.classList.contains('hidden');
-        
-        // Optional: Close all other open FAQs first (Accordion effect)
-        document.querySelectorAll('.faq-answer').forEach(el => el.classList.add('hidden'));
-        document.querySelectorAll('.fa-chevron-down').forEach(el => el.classList.remove('rotate-180'));
-
-        // Toggle current item
-        if (isHidden) {
-            answer.classList.remove('hidden');
-            icon.classList.add('rotate-180');
+        // Toggle display directly to avoid CSS class issues
+        if (answer.style.display === "none") {
+            answer.style.display = "block";
+            icon.style.transform = "rotate(180deg)";
+        } else {
+            answer.style.display = "none";
+            icon.style.transform = "rotate(0deg)";
         }
     });
-}
-
-// Initialize the FAQ
-renderFAQ();
+});
 
 
 
