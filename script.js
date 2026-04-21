@@ -39,30 +39,28 @@ const products = [
     { id: 9, name: "Bosch Brake Pads (Front)", category: "Brake Pads", price: 2450, desc: "Set of 4 pads – quiet & long lasting", img: "image/pad1.jpeg" },
     { id: 10, name: "Textar Brake Pads", category: "Brake Pads", price: 1890, desc: "European quality brake pads", img: "image/pad2.jpeg" },
     { id: 11, name: "Synthetic Lexus 5W-40", category: "Motor Oils", price: 4000, desc: "4 litres – fully synthetic", img: "image/motoroil2.jpeg" },
-     { id: 11, name: "Japan Eneos Motor Oil 5W-40", category: "Eneos Oils", price: 3000, desc: "4 litres – fully synthetic", img: "image/motoroil3.jpeg" },
-    { id: 11, name: "Toyota SL/CF 15W-40", category: "Motor Oils", price: 3000, desc: "5 litres – fully synthetic", img: "image/motoroil2.jpeg" },
-    { id: 12, name: "Total Quartz 10W-40", category: "Motor Oils", price: 1350, desc: "4 litres semi-synthetic", img: "image/motoroil1.jpeg" },
-    
-    { id: 17, name: "Shock Absorber (Front)", category: "Suspension Parts", price: 7500, desc: "Monroe gas shock – pair", img: "image/shock1.jpeg" },
-    { id: 18, name: "Coil Spring Set", category: "Suspension Parts", price: 15800, desc: "Heavy-duty for Hilux", img: "image/shock2.jpeg" },
-    { id: 19, name: "Timing Belt Kit", category: "Engine Parts", price: 6500, desc: "Complete kit with tensioner", img: "https://picsum.photos/id/1009/300/200" },
-    { id: 20, name: "Water Pump Toyota", category: "Engine Parts", price: 4200, desc: "Genuine Toyota water pump", img: "https://picsum.photos/id/1016/300/200" },
-    { id: 21, name: "Spark Plugs Set", category: "Other Garage Spare Parts", price: 1200, desc: "NGK iridium plugs – set of 4", img: "https://picsum.photos/id/201/300/200" },
-    { id: 22, name: "Radiator Hose Kit", category: "Other Garage Spare Parts", price: 950, desc: "Upper & lower radiator hoses", img: "https://picsum.photos/id/251/300/200" }
+    { id: 12, name: "Japan Eneos Motor Oil 5W-40", category: "Eneos Oils", price: 3000, desc: "4 litres – fully synthetic", img: "image/motoroil3.jpeg" },
+    { id: 13, name: "Toyota SL/CF 15W-40", category: "Motor Oils", price: 3000, desc: "5 litres – fully synthetic", img: "image/motoroil2.jpeg" },
+    { id: 14, name: "Total Quartz 10W-40", category: "Motor Oils", price: 1350, desc: "4 litres semi-synthetic", img: "image/motoroil1.jpeg" },
+    { id: 15, name: "Shock Absorber (Front)", category: "Suspension Parts", price: 7500, desc: "Monroe gas shock – pair", img: "image/shock1.jpeg" },
+    { id: 16, name: "Coil Spring Set", category: "Suspension Parts", price: 15800, desc: "Heavy-duty for Hilux", img: "image/shock2.jpeg" },
+    { id: 17, name: "Timing Belt Kit", category: "Engine Parts", price: 5550, desc: "Complete kit with tensioner", img: "image/belt.jpeg" },
+    { id: 18, name: "Spark Plugs Set", category: "Other Garage Spare Parts", price: 1200, desc: "NGK iridium plugs – set of 4", img: "image/spark.jpeg" },
+    { id: 19, name: "Radiator Hose Kit", category: "Other Garage Spare Parts", price: 950, desc: "Upper & lower radiator hoses", img: "https://picsum.photos/id/251/300/200" }
 ]
 
 const servicesData = [
     { icon: "fa-solid fa-arrows-rotate", title: "Wheel Alignment", price: "2,500", desc: "Computerized 4-wheel alignment" },
-    { icon: "fa-solid fa-balance-scale", title: "Wheel Balancing", price: "1,200", desc: "Per wheel – includes weights" },
+    { icon: "fa-solid fa-balance-scale", title: "Wheel Balancing", price: "2,000", desc: "Per wheel – includes weights" },
     { icon: "fa-solid fa-screwdriver-wrench", title: "Mechanical Repairs", price: "From 4,000", desc: "Engine, gearbox, clutch repairs" },
     { icon: "fa-solid fa-laptop", title: "Car Diagnostics", price: "1,800", desc: "OBD-II full system scan" },
     { icon: "fa-solid fa-oil-can", title: "Engine Service", price: "6,500", desc: "Full engine tune-up + oil" },
     { icon: "fa-solid fa-spray-can", title: "Car Painting & Body Work", price: "From 25,000", desc: "Panel beating & respray" },
-    { icon: "fa-solid fa-droplet", title: "Oil Change Service", price: "2,800", desc: "Oil + filter + inspection" }
+    { icon: "fa-solid fa-droplet", title: "Oil Change Service", price: "5,900", desc: "Oil + filter + inspection" }
 ]
 
 const pricingData = [
-    { service: "Oil Change + Filter", price: "2,800 KES" },
+    { service: "Oil Change + Filter", price: "5,900 KES" },
     { service: "Wheel Alignment", price: "2,500 KES" },
     { service: "Brake Pad Replacement", price: "From 4,500 KES" },
     { service: "Full Engine Service", price: "6,500 KES" },
@@ -125,7 +123,7 @@ function renderCart() {
     if (!container) return
 
     if (cart.length === 0) {
-        container.innerHTML = `<div class="text-center py-20"><i class="fa-solid fa-cart-shopping text-7xl text-zinc-700 mb-6"></i><p class="text-2xl">Your cart is empty</p><a href="shop.html" class="mt-6 inline-block bg-red-600 text-white px-8 py-4 rounded-2xl">Start Shopping</a></div>`
+        container.innerHTML = `<div class="text-center py-20"><i class="fa-solid fa-cart-shopping text-7xl text-zinc-700 mb-6"></i><p class="text-2xl">Your cart is empty</p><a href="shop.html" class="mt-6 inline-block bg-orange-600 text-white px-8 py-4 rounded-2xl">Start Shopping</a></div>`
         return
     }
 
@@ -182,7 +180,7 @@ function renderProducts(filteredProducts) {
         <div class="product-card bg-white/5 border border-white/10 rounded-3xl overflow-hidden group">
             <img src="${product.img}" alt="${product.name}" class="w-full h-48 object-cover">
             <div class="p-5">
-                <div class="text-xs uppercase text-red-400 mb-1">${product.category}</div>
+                <div class="text-xs uppercase text-orange-400 mb-1">${product.category}</div>
                 <h4 class="font-semibold leading-tight mb-2">${product.name}</h4>
                 <p class="text-sm text-zinc-400 line-clamp-2 mb-4">${product.desc}</p>
                 <div class="flex justify-between items-end">
@@ -192,7 +190,7 @@ function renderProducts(filteredProducts) {
                     </div>
                     <div class="flex items-center gap-3">
                         <button onclick="addToCart(${product.id});" 
-                                class="bg-red-600 hover:bg-red-700 transition-colors text-white w-11 h-11 rounded-2xl flex items-center justify-center text-xl">
+                                class="bg-orange-600 hover:bg-orange-700 transition-colors text-white w-11 h-11 rounded-2xl flex items-center justify-center text-xl">
                             <i class="fa-solid fa-cart-plus"></i>
                         </button>
                     </div>
@@ -250,17 +248,17 @@ function renderServices() {
     let html = ''
     servicesData.forEach(service => {
         html += `
-        <div class="bg-white/5 border border-white/10 rounded-3xl p-7 hover:border-red-500 transition-colors group">
-            <i class="${service.icon} text-5xl text-red-500 mb-6"></i>
+        <div class="bg-white/5 border border-white/10 rounded-3xl p-7 hover:border-orange-500 transition-colors group">
+            <i class="${service.icon} text-5xl text-orange-500 mb-6"></i>
             <h3 class="text-2xl font-semibold">${service.title}</h3>
             <p class="text-zinc-400 mt-2">${service.desc}</p>
             <div class="mt-8 flex justify-between items-end">
                 <div>
                     <span class="text-xs">Starting at</span>
-                    <span class="block text-4xl font-bold text-red-400">KES ${service.price}</span>
+                    <span class="block text-4xl font-bold text-orange-400">KES ${service.price}</span>
                 </div>
                 <button onclick="quickBook('${service.title}')" 
-                        class="bg-white text-black px-8 py-4 rounded-2xl font-medium group-hover:bg-red-600 group-hover:text-white transition-colors">BOOK NOW</button>
+                        class="bg-white text-black px-8 py-4 rounded-2xl font-medium group-hover:bg-orange-600 group-hover:text-white transition-colors">BOOK NOW</button>
             </div>
         </div>`
     })
@@ -302,7 +300,7 @@ function renderFeaturedProducts() {
             <img src="${p.img}" class="mx-auto h-36 object-contain">
             <div class="px-4 pb-4">
                 <h4 class="font-medium text-sm">${p.name}</h4>
-                <div class="text-red-400 font-bold">KES ${p.price}</div>
+                <div class="text-orange-400 font-bold">KES ${p.price}</div>
             </div>
         </div>`
     })
@@ -316,8 +314,8 @@ function renderServicesPreview() {
     let html = ''
     preview.forEach(s => {
         html += `
-        <div class="bg-white/5 border border-white/10 rounded-3xl p-6 text-center hover:border-red-500 transition">
-            <i class="${s.icon} text-4xl mb-4 text-red-500"></i>
+        <div class="bg-white/5 border border-white/10 rounded-3xl p-6 text-center hover:border-orange-500 transition">
+            <i class="${s.icon} text-4xl mb-4 text-orange-500"></i>
             <p class="font-semibold">${s.title}</p>
         </div>`
     })
@@ -333,7 +331,7 @@ function renderPricing() {
         html += `
         <div class="bg-white/5 border border-white/10 rounded-3xl p-8 flex justify-between items-center">
             <div class="text-lg">${item.service}</div>
-            <div class="font-bold text-3xl text-red-400">${item.price}</div>
+            <div class="font-bold text-3xl text-orange-400">${item.price}</div>
         </div>`
     })
     container.innerHTML = html
@@ -374,7 +372,7 @@ function handleBooking(e) {
 
     const message = `Hello EMCA Motors!%0AName: ${name}%0APhone: ${phone}%0AService: ${service}%0ADate: ${document.getElementById('book-date').value}%0ACar: ${document.getElementById('book-car').value}%0A%0AThank you!`
     
-    window.open(`https://wa.me/254712345678?text=${message}`, '_blank')
+    window.open(`https://wa.me/254768927893?text=${message}`, '_blank')
     
     // Reset form
     e.target.reset()
@@ -396,7 +394,7 @@ function handleCheckout(e) {
     // Simulate payment confirmation
     setTimeout(() => {
         alert('🎉 Order placed successfully! Simulated M-Pesa confirmation sent.')
-        window.open(`https://wa.me/254712345678?text=${message}`, '_blank')
+        window.open(`https://wa.me/254768927893?text=${message}`, '_blank')
         
         // Clear cart
         cart = []
@@ -412,7 +410,7 @@ function handleCheckout(e) {
 function handleContact(e) {
     e.preventDefault()
     const message = `New contact form submission!%0AName: ${document.getElementById('contact-name').value}%0APhone: ${document.getElementById('contact-phone').value}%0AEmail: ${document.getElementById('contact-email').value}%0AMessage: ${document.getElementById('contact-message').value}`
-    window.open(`https://wa.me/254712345678?text=${message}`, '_blank')
+    window.open(`https://wa.me/254768927893?text=${message}`, '_blank')
     alert('✅ Message sent! We will reply on WhatsApp shortly.')
     e.target.reset()
 }
