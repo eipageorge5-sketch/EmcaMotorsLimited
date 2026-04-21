@@ -345,6 +345,7 @@ function renderFAQ() {
     const faqs = [
         { q: "Do you stock genuine Toyota parts?", a: "Yes! All our parts are sourced directly from authorized distributors in Kenya." },
         { q: "How fast is your service?", a: "Most oil changes and alignments are completed within 90 minutes." },
+        { q: "", a: "" },
         { q: "Do you deliver outside Lodwar?", a: "Yes – we deliver to Kakuma, Lokichar, and Kitale within 48 hours." },
         { q: "Is cash on delivery available?", a: "Absolutely. You can also pay via M-Pesa or bank transfer." }
     ]
