@@ -339,8 +339,8 @@ function renderPricing() {
 
 // =============== FAQ PAGE ===============
 function renderFAQ() {
-    const container = document.getElementById('faq-list')
-    if (!container) return
+    const container = document.getElementById('faq-list');
+    if (!container) return;
 
     const faqs = [
         { q: "Do you stock genuine Toyota parts?", a: "Yes! All our parts are sourced directly from authorized distributors in Kenya." },
@@ -349,21 +349,54 @@ function renderFAQ() {
         { q: "What is the difference between wheel alignment and balancing?", a: "Alignment adjusts the angles of the wheels to manufacturer specs, while balancing corrects weight distribution around the wheel to prevent steering wheel vibrations." },
         { q: "Do you deliver outside Lodwar?", a: "Currently, our delivery services are exclusively available within Lodwar town. This allows us to ensure the fastest delivery times and maintain the quality of our service for our local customers." },
         { q: "Is cash on delivery available?", a: "Absolutely. You can also pay via M-Pesa or bank transfer." }
-    ]
+    ];
 
-    let html = ''
-    faqs.forEach((faq, i) => {
+    // 1. Generate the HTML structure
+    let html = '';
+    faqs.forEach((faq) => {
         html += `
-        <div onclick="this.classList.toggle('active'); this.nextElementSibling.classList.toggle('hidden')" class="bg-white/5 border border-white/10 rounded-3xl px-8 py-6 cursor-pointer">
+        <div class="faq-item bg-white/5 border border-white/10 rounded-3xl px-8 py-6 cursor-pointer mb-4 transition-all duration-300">
             <div class="flex justify-between items-center">
-                <h4 class="font-semibold">${faq.q}</h4>
-                <i class="fa-solid fa-chevron-down transition-transform"></i>
+                <h4 class="font-semibold text-white">${faq.q}</h4>
+                <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
             </div>
-            <div class="hidden mt-6 text-zinc-400">${faq.a}</div>
-        </div>`
-    })
-    container.innerHTML = html
+            <div class="faq-answer hidden mt-6 text-zinc-400">
+                ${faq.a}
+            </div>
+        </div>`;
+    });
+
+    container.innerHTML = html;
+
+    // 2. Add a single Event Listener for all FAQ items
+    container.addEventListener('click', (e) => {
+        // Find the closest parent that is a FAQ item
+        const item = e.target.closest('.faq-item');
+        if (!item) return;
+
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('.fa-chevron-down');
+
+        // Toggle the 'hidden' class on the answer
+        const isHidden = answer.classList.contains('hidden');
+        
+        // Optional: Close all other open FAQs first (Accordion effect)
+        document.querySelectorAll('.faq-answer').forEach(el => el.classList.add('hidden'));
+        document.querySelectorAll('.fa-chevron-down').forEach(el => el.classList.remove('rotate-180'));
+
+        // Toggle current item
+        if (isHidden) {
+            answer.classList.remove('hidden');
+            icon.classList.add('rotate-180');
+        }
+    });
 }
+
+// Initialize the FAQ
+renderFAQ();
+
+
+
 
 // =============== FORM HANDLERS ===============
 function handleBooking(e) {
