@@ -9,17 +9,27 @@
     --primary-color: #f97316; /* Orange */
 }
 
-.hero-video { 
- /* Hero Video */
-.hero-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* Hero Background Image */
+header {
+    position: relative;
+}
+
+header .absolute.inset-0 {
     z-index: -1;
-} 
+}
+
+/* Make sure image covers the full screen nicely */
+header .bg-cover {
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;   /* Optional: nice parallax effect on desktop */
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+    header .bg-cover {
+        background-attachment: scroll;   /* Better performance on mobile */
+    }
 }
 
 .category-btn.active {
