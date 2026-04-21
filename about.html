@@ -11,10 +11,61 @@
 </head>
 <body class="bg-zinc-950 text-white" data-page="about">
 
-       <!-- NAVBAR copied -->
+       <!-- FULL NAVBAR -->
     <nav class="bg-black sticky top-0 z-50 border-b border-orange-600">
-        <!-- full navbar code same as index.html -->
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center gap-x-3">
+                    <img src="Emca.png" alt="EmcaLogo" class="h-11 w-auto">
+                    <div>
+                        <h1 class="text-2xl font-black tracking-tighter text-orange-500">EMCA MOTORS</h1>
+                        <p class="text-[10px] text-orange-300 -mt-1">LIMITED • LODWAR</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                    <a href="index.html" class="hover:text-orange-500 transition-colors">HOME</a>
+                    <a href="shop.html" class="hover:text-orange-500 transition-colors">SHOP PARTS</a>
+                    <a href="services.html" class="hover:text-orange-500 transition-colors">SERVICES</a>
+                    <a href="about.html" class="hover:text-orange-500 transition-colors">ABOUT</a>
+                    <a href="pricing.html" class="hover:text-orange-500 transition-colors">PRICING</a>
+                    <a href="faq.html" class="text-orange-500">FAQ</a>
+                    <a href="contact.html" class="hover:text-orange-500 transition-colors">CONTACT</a>
+                </div>
+
+                <div class="flex items-center gap-x-4">
+                    <a href="cart.html" class="relative flex items-center gap-x-1 hover:text-orange-500 transition-colors">
+                        <i class="fa-solid fa-cart-shopping text-xl"></i>
+                        <span id="cart-count-nav" class="absolute -top-1 -right-1 bg-orange-600 text-white text-[10px] font-bold w-5 h-5 rounded-full flex items-center justify-center">0</span>
+                    </a>
+                    <a href="https://wa.me/254768927893" target="_blank"
+                       class="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-full flex items-center gap-x-2 text-sm font-medium">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                        <span class="hidden sm:inline">WhatsApp</span>
+                    </a>
+                    <button onclick="toggleMobileMenu()" class="md:hidden text-2xl">
+                        <i class="fa-solid fa-bars" id="mobile-menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-zinc-800 px-4 py-6">
+            <div class="flex flex-col gap-y-5 text-lg">
+                <a href="index.html" class="py-2">🏠 HOME</a>
+                <a href="shop.html" class="py-2">🛒 SHOP PARTS</a>
+                <a href="services.html" class="py-2">🔧 SERVICES</a>
+                <a href="about.html" class="py-2">ℹ️ ABOUT</a>
+                <a href="pricing.html" class="py-2">💰 PRICING</a>
+                <a href="faq.html" class="py-2 text-orange-500">❓ FAQ</a>
+                <a href="contact.html" class="py-2">📞 CONTACT</a>
+            </div>
+        </div>
     </nav>
+
 
     <div class="max-w-4xl mx-auto px-4 py-16">
         <h1 class="text-5xl font-black mb-8">About EMCA MOTORS LIMITED</h1>
