@@ -338,57 +338,40 @@ function renderPricing() {
 }
 
 // =============== FAQ PAGE ===============
-function renderFAQ() {
-    const container = document.getElementById('faq-list');
-    if (!container) return;
 
-    const faqs = [
-        { q: "Do you stock genuine Toyota parts?", a: "Yes! All our parts are sourced directly from authorized distributors in Kenya." },
-        { q: "How fast is your service?", a: "Most oil changes and alignments are completed within 90 minutes." },
-        { q: "Do I need an appointment for alignment or balancing?", a: "While we accept walk-ins for parts purchases, we recommend booking an appointment for alignment, balancing, or mechanical repairs to ensure minimal wait time." },
-        { q: "What is the difference between wheel alignment and balancing?", a: "Alignment adjusts the angles of the wheels to manufacturer specs, while balancing corrects weight distribution around the wheel to prevent steering wheel vibrations." },
-        { q: "Do you deliver outside Lodwar?", a: "Currently, our delivery services are exclusively available within Lodwar town." },
-        { q: "Is cash on delivery available?", a: "Absolutely. You can also pay via M-Pesa or bank transfer." }
-    ];
+document.addEventListener('DOMContentLoaded', () => {
+    const faqContainer = document.getElementById('faq-list');
 
-    // Build the list
-    container.innerHTML = faqs.map((faq, index) => `
-        <div class="faq-card bg-white/5 border border-white/10 rounded-3xl px-8 py-6 cursor-pointer transition-all hover:bg-white/10" data-index="${index}">
-            <div class="flex justify-between items-center pointer-events-none">
-                <h4 class="font-semibold text-white text-lg">${faq.q}</h4>
-                <i class="fa-solid fa-chevron-down text-orange-500 transition-transform duration-300"></i>
-            </div>
-            <div class="faq-answer hidden mt-6 text-zinc-400 border-t border-white/5 pt-4">
-                ${faq.a}
-            </div>
-        </div>
-    `).join('');
+    if (faqContainer) {
+        faqContainer.addEventListener('click', (e) => {
+            // 1. Find the FAQ item that was clicked
+            const item = e.target.closest('.faq-item');
+            if (!item) return;
 
-    // Add click event to the container
-    container.addEventListener('click', (e) => {
-        const card = e.target.closest('.faq-card');
-        if (!card) return;
+            // 2. Select the answer and the icon inside the clicked item
+            const answer = item.querySelector('.faq-answer');
+            const icon = item.querySelector('.fa-chevron-down');
 
-        const answer = card.querySelector('.faq-answer');
-        const icon = card.querySelector('.fa-chevron-down');
+            // 3. Close all OTHER open FAQs (Optional - for accordion effect)
+            document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
+                if (otherAnswer !== answer) {
+                    otherAnswer.classList.remove('show');
+                    otherAnswer.parentElement.querySelector('.fa-chevron-down').classList.remove('rotate-180');
+                }
+            });
 
-        // Toggle visibility
-        const isHidden = answer.classList.contains('hidden');
-        
-        // Close all others (Accordion style)
-        document.querySelectorAll('.faq-answer').forEach(el => el.classList.add('hidden'));
-        document.querySelectorAll('.fa-chevron-down').forEach(el => el.classList.remove('rotate-180'));
-
-        // If it was hidden, open it
-        if (isHidden) {
-            answer.classList.remove('hidden');
-            icon.classList.add('rotate-180');
-        }
-    });
-}
-
-// Run the function
-document.addEventListener('DOMContentLoaded', renderFAQ);
+            // 4. Toggle the clicked one
+            const isOpen = answer.classList.toggle('show');
+            
+            // 5. Rotate the icon
+            if (isOpen) {
+                icon.classList.add('rotate-180');
+            } else {
+                icon.classList.remove('rotate-180');
+            }
+        });
+    }
+});
 
 
 
