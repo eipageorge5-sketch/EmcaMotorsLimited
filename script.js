@@ -345,8 +345,8 @@ function renderFAQ() {
     const faqs = [
         { q: "Do you stock genuine Toyota parts?", a: "Yes! All our parts are sourced directly from authorized distributors in Kenya." },
         { q: "How fast is your service?", a: "Most oil changes and alignments are completed within 90 minutes." },
-        { q: "What is the difference between wheel alignment and balancing?", a: "" },
-        { q: "Do you deliver outside Lodwar?", a: "Yes – we deliver to Kakuma, Lokichar, and Kitale within 48 hours." },
+        { q: "What is the difference between wheel alignment and balancing?", a: "Alignment adjusts the angles of the wheels to manufacturer specs, while balancing corrects weight distribution around the wheel to prevent steering wheel vibrations." },
+        { q: "Do you deliver outside Lodwar?", a: "Currently, our delivery services are exclusively available within Lodwar town. This allows us to ensure the fastest delivery times and maintain the quality of our service for our local customers.." },
         { q: "Is cash on delivery available?", a: "Absolutely. You can also pay via M-Pesa or bank transfer." }
     ]
 
